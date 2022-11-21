@@ -1,0 +1,33 @@
+/* My classes */
+
+.d-flex {
+    display: flex;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.jContentSpaceBtw {
+    justify-content: space-between;
+}
+
+/* Mixins */
+
+@mixin properties ($ff, $color, $f-size, $l-height, $fw: 400 ) {
+    font-family: $ff;
+    font-size: $f-size;
+    font-weight: $fw;
+    line-height:  $l-height;
+    color: $color;
+}
+
+/* Vars */
+$fontPoppins: "Poppins";
+$fontOpenSans: "Open Sans";
+
+$primary: #6A983C;
+$secondary: #575757;
+$black: #151515; 
+$grey: #F9F9F9;
+
