@@ -1,7 +1,7 @@
 import React from "react";
 import NavOption from "./NavOption";
 
-import arrowDown from "../../../images/arrowDown.svg"
+import arrowDown from "../../../assets/images/arrowDown.svg"
 
 const NavigationList = ({ elements }) => {
 
