@@ -1,8 +1,8 @@
 import React from "react";
-import ActionsUser from "../UI/header/ActionsUser";
-import SearchBox from "../UI/header/SearchBox";
+import ActionsUser from "../Header/header-components/ActionsUser";
+import SearchBox from "../Header/header-components/SearchBox";
 
-import logo from "../../images/logo.svg";
+import logo from "../../assets/images/logo.svg";
 
 
 const Header = () => {
