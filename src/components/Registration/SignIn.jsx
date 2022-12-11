@@ -1,6 +1,7 @@
 import React from "react";
+import RegistrationEmail from "../UI/inputs/registrationEmail";
 
-const SighIn = () => {
+const SignIn = () => {
 
     return (
         <div className="signIn">
@@ -18,6 +19,8 @@ const SighIn = () => {
                         <p className="signIn__email-title">
                             Email
                         </p>
+
+                        <RegistrationEmail/>
                     
                     </div>
                 </div>
@@ -25,3 +28,5 @@ const SighIn = () => {
         </div>
     )
 }
+
+export default SignIn;

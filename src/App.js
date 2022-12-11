@@ -1,18 +1,14 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 import "./index.scss";
-
-import Header from "./components/Header/Header.jsx";
-import Navigation from "./components/Navigation/Navigation.jsx";
-import CategoryMenu from "./components/Content/CategoryMenu.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Navigation/>
-      <CategoryMenu/>
-    </div>
+    <BrowserRouter>
+      <AppRouter/>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

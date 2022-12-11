@@ -6,3 +6,5 @@ const RegistrationEmail = () => {
         <input type="email" />
     )
 } 
+
+export default RegistrationEmail;

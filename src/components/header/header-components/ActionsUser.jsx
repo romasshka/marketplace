@@ -7,7 +7,7 @@ const ActionsUser = () => {
     return (
         <div className="header-actions d-flex">
             <li className="header-actions__user">
-                <a className="header-actions__user-link" href="#">
+                <a className="header-actions__user-link" href="">
                     <img className="header-actions__user-img" src={accUser} alt="#" />
                 </a>
             </li>
