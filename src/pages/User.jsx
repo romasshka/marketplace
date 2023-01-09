@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../components/Header/Header";
 
 const User = () => {
 
     return(
         <div>
-            Admin Page
+            <Header/>
+            RegistrationUser Page
         </div>
     )
 }

@@ -1,0 +1,47 @@
+@import "../myVars.scss";
+
+.signIn {
+
+    &__wrapper {
+        max-width: 470px;
+        margin: 0 auto;
+    }
+
+    &-title {
+        text-align-last: center;
+        margin-bottom: 24px;
+        @include properties($fontPoppins, $black, 28px, 150%, 700)
+    }
+
+    &-info {
+        margin-bottom: 24px;
+        text-align: center;
+        @include properties($fontPoppins, #787A80, 18px, 150%, 400)
+    }
+
+    &Form {
+
+        &-title {
+            margin-bottom: 8px;
+            @include properties($fontPoppins, $black, 23px, 150%, 400)
+        }
+
+        &-input {
+            width: 100%;
+            height: 44px;
+            border: 1px solid #D7DADD;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        &-btn {
+            width: 100%;
+            border: none;
+            background-color: $primary;
+            @include properties($fontPoppins, $grey, 18px, 44px, 500);
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+    }
+}

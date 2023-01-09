@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import NavigationList from "./NavigationParts/NavigationList.jsx";
 
+import "../../assets/styles/blocks/navigation.scss";
+
 const Navigation = () => {
 
     const [elements] = useState([

@@ -4,6 +4,8 @@ import CategoryBanner from "./CategoryParts/CategoryBanner";
 
 import fruit from "../../assets/images/fruit.jpg"
 
+import "../../assets/styles/blocks/category.scss";
+
 const CategoryMenu = () => {
 
     const [elements] = useState([

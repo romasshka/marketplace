@@ -1,28 +1,25 @@
 import React from "react";
-import RegistrationEmail from "../UI/inputs/registrationEmail";
+import SignInForm from "./SignInForm/SighInForm.jsx";
+
+import "../../assets/styles/blocks/SignIn.scss";
+
 
 const SignIn = () => {
 
     return (
         <div className="signIn">
             <div className="container">
-                <div className="wrapper">
-                    <h3 className="sighIn-title">
+                <div className="signIn__wrapper">
+                    <h3 className="signIn-title">
                         Sign In
                     </h3>
 
-                    <p className="signIn-info">
+                    <p className="signIn-info textAlignCenter">
                         Sign in to your account using email and password provided during registration.
                     </p>
-
-                    <div className="signIn__email">
-                        <p className="signIn__email-title">
-                            Email
-                        </p>
-
-                        <RegistrationEmail/>
                     
-                    </div>
+                    <SignInForm />
+
                 </div>
             </div>
         </div>

@@ -1,0 +1,48 @@
+@import "../../myVars.scss";
+
+.filters {
+    &__block {
+        margin-bottom: 30px;
+
+        &-title {
+            @include properties($fontPoppins, $black, 22px, 27px, 600);
+            margin-bottom: 8px;
+        }
+
+        &-link {
+            @include properties($fontOpenSans, $black, 18px, 19px);
+            margin-bottom: 5px;
+
+            position: relative;
+            display: block;
+            padding: 8px 16px 8px 35px;
+            border-radius: 4px;
+            transition: all .2s ease;
+
+            &:hover {
+                background-color: #f4faf6;
+            
+                &::before {
+                    border-color: $black;
+                }
+            }
+
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: 8px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #d2d2d2;
+                border-radius: 4px;
+                background-color: #fff;
+                transition-property: background-color, border-color;
+                transition-duration: .2s;
+                transition-timing-function: ease-in-out;
+            }
+        }
+    }
+}

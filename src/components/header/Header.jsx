@@ -1,8 +1,14 @@
 import React from "react";
+
+import logo from "../../assets/images/logo.svg";
 import ActionsUser from "../Header/header-components/ActionsUser";
 import SearchBox from "../Header/header-components/SearchBox";
 
-import logo from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
+import { SHOP_ROUTE } from "../utils/const";
+
+import "../../assets/styles/blocks/header.scss";
+
 
 
 const Header = () => {
@@ -12,10 +18,12 @@ const Header = () => {
             <div className="container">
                 <div className="wrapper d-flex jContentSpaceBtw alignItemsCenter">
                     <div className="header__logo">
-                        <img className="header__logo-img" src={logo} alt="#" />
+                        <Link className="header__logo-link" to={SHOP_ROUTE} >
+                            <img className="header__logo-img" src={logo} alt="#" />
+                        </Link>
                     </div>
-                    <SearchBox/>
-                    <ActionsUser/>
+                    <SearchBox />
+                    <ActionsUser />
                 </div>
             </div>
         </header >

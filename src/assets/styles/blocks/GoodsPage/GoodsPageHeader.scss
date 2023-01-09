@@ -1,0 +1,23 @@
+@import "../../myVars.scss";
+
+.goodsPage__header {
+    margin-bottom: 20px;
+    &-title {
+        @include properties($fontPoppins, $black, 32px, 48px, 600)
+    }
+
+    &-actions {
+
+        &-view {
+            margin-left: 24px;
+        }
+        &-text {
+            @include properties($fontOpenSans,$black,12px, 16px);
+            margin-left: 3px;
+        }
+
+        &-image {
+            vertical-align: text-bottom;
+        }
+    }
+}
