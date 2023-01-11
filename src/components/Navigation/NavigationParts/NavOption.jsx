@@ -6,7 +6,7 @@ const NavOption = ({ options }) => {
         <div className="navbar-content">
             {
                 options.map(option =>
-                    <a>
+                    <a href="#">
                         {option}
                     </a>)
             }

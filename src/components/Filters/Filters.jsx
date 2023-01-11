@@ -85,7 +85,11 @@ const Filters = () => {
                         justifyContent: "space-between",
                     }}>
 
-                    <TextField id="outlined-basic" label="Min" variant="outlined" color="success"
+                    <TextField
+                        id="outlined-basic"
+                        label="Min"
+                        variant="outlined"
+                        color="success"
                         value={minValue}
                         sx={{
                             maxWidth: "100px",
@@ -93,7 +97,11 @@ const Filters = () => {
                             textAlign: "center",
                         }}
                     />
-                    <TextField id="outlined-basic" label="Max" variant="outlined" color="success"
+                    <TextField
+                        id="outlined-basic"
+                        label="Max"
+                        variant="outlined"
+                        color="success"
                         value={maxValue}
                         sx={{
                             maxWidth: "100px",

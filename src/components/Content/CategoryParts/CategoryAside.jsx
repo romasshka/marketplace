@@ -1,27 +1,45 @@
-import React from "react";
+import { Button, List, ListItem } from "@mui/material";
+import { observer } from "mobx-react-lite";
+import React, { useContext } from "react";
+import { Context } from "../../..";
 
-const CategoryAside = ({elements}) => {
+import NavLink from "../../NavLink.tsx";
+
+const CategoryAside = observer(() => {
+
+    const { device } = useContext(Context)
 
     return (
         <aside className="category__aside">
             <h4 className="category__aside-title">
                 Category menu
             </h4>
-            <ul className="category__aside-list">
-                {elements.map(element =>
-                    <li key={element.id} className="category__aside-item">
-                        <a className="category__aside-link" href="#" >
-                            {element.title}
-                        </a>
-                    </li>
-                )}
-            </ul>
+
+            <List className="category__aside-list">
+                {device.types.map(type =>
+                    <ListItem>
+                        <Button
+                            key={type.id}
+                            component={NavLink}
+                            underline="none"
+                            sx={{
+                                py: "0px",
+                                color: "green",
+                            }}>
+                            {type.name}
+                        </Button>
+                    </ListItem>
+                )
+                }
+            </List>
+
+
 
             <a className="category__btn" href="#">
                 More categories
             </a>
-        </aside>
-    )
-}
+        </aside >
+    );
+});
 
 export default CategoryAside;

@@ -1,34 +1,127 @@
+import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import React from "react";
 
-import { Link } from "react-router-dom";
-import { LOGIN_ROUTE } from "../utils/const";
-import SignUpForm from "./SignUpForm/SignUpForm";
+import NavLink from "../NavLink.tsx";
+
+import { MAIN_ROUTE } from "../utils/const";
+/* import SignUpForm from "./SignUpForm/SignUpForm"; */
 
 
 const SignUp = () => {
 
     return (
-        <div className="signUp">
-            <div className="container">
-                <div className="signUp__wrapper">
-                    <h3 className="signUp-title">
-                        Sign In
-                    </h3>
 
-                    <p className="signUp-info textAlignCenter">
-                        Registration takes less than a minute but gives you full control over your orders.
-                    </p>
+        <Container>
+            <Box
+                component="form"
+                noValidate
+                display="flex"
+                flexDirection={"column"}
+                maxWidth={400}
+                alignItems="center"
+                justifyContent={"center"}
+                margin={"auto"}
+            >
 
-                    <SignUpForm/>
-                    <p className="signUp-text">
-                        Already have an account?
-                        <Link className="signUp-link" to={LOGIN_ROUTE}>
-                            SignIn
-                        </Link>
-                    </p>
-                </div>
-            </div>
-        </div>
+                <Typography
+                    textAlign={"center"}
+                    variant="h4"
+                    marginBottom={"15px"}
+                >
+                    Sign Up
+                </Typography>
+                <Typography
+                    marginBottom={"20px"}
+                    variantMapping={"p"}
+                    textAlign={"center"}
+                >
+                    Sign in to your account using email and password provided during registration.
+                </Typography>
+
+                <TextField
+                    id="outlined-basic"
+                    type="text"
+                    tabIndex="1"
+                    placeholder="Your full name"
+                    label="Full Name"
+                    variant="outlined"
+                    color="success"
+                    sx={{
+                        width: "100%",
+                        mb: "20px",
+                    }}
+                />
+
+                <TextField
+                    id="outlined-basic"
+                    type="email"
+                    tabIndex="2"
+                    placeholder="yourGmail@gmail.com"
+                    label="Email"
+                    variant="outlined"
+                    color="success"
+                    sx={{
+                        width: "100%",
+                        mb: "20px",
+                    }}
+                />
+
+
+                <TextField
+                    id="outlined-basic"
+                    type="password"
+                    tabIndex="3"
+                    placeholder="Your password"
+                    label="Password"
+                    variant="outlined"
+                    color="success"
+                    sx={{
+                        width: "100%",
+                        mb: "20px",
+                    }}
+                />
+
+                <TextField
+                    id="outlined-basic"
+                    type="password"
+                    tabIndex="4"
+                    placeholder="Confirm password"
+                    label="Confirm your"
+                    variant="outlined"
+                    color="success"
+                    sx={{
+                        width: "100%",
+                        mb: "20px",
+                    }}
+                />
+
+                <Box
+                    width="-webkit-fill-available"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="space-between"
+                    sx={{
+                        px: "10px",
+                        mb: "5px",
+                    }}
+                >
+                </Box>
+
+                <Button
+                    component={NavLink}
+                    to={MAIN_ROUTE}
+                    variant="contained"
+                    color="success"
+                    tabIndex="5"
+                    sx={{
+                        width: "100%",
+                        mb: "15px",
+                    }}
+                >
+                    Sign Up
+                </Button>
+            </Box>
+        </Container>
     )
 }
 

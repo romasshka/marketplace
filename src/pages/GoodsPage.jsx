@@ -4,7 +4,6 @@ import React from "react";
 import Filters from "../components/Filters/Filters";
 import GoodsGridPage from "../components/Goods/GoodsGridPage";
 import GoodsPageHeader from "../components/Goods/GoodsHeader/GoodsPageHeader";
-import GoodsListPage from "../components/Goods/GoodsListPage";
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 

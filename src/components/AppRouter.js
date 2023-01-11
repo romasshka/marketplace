@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Context } from "..";
 import { authRoutes, publicRoutes } from "../routes";
-import { SHOP_ROUTE } from "./utils/const";
+import { MAIN_ROUTE } from "./utils/const";
 
 const AppRouter = () => {
 
@@ -21,7 +21,7 @@ const AppRouter = () => {
                 )}
           {  <Route
                 path="*"
-                element={<Navigate to={SHOP_ROUTE} replace />}
+                element={<Navigate to={MAIN_ROUTE} replace />}
             />}
         </Routes>
     )
