@@ -15,9 +15,12 @@ const CategoryAside = observer(() => {
                 Category menu
             </h4>
 
-            <List className="category__aside-list">
+            <List>
                 {device.types.map(type =>
-                    <ListItem>
+                    <ListItem
+                        sx={{
+                            py: "3px"
+                        }}>
                         <Button
                             key={type.id}
                             component={NavLink}

@@ -4,3 +4,4 @@ export const REGISTRATION_ROUTE = '/registration'; /* /registration */
 export const MAIN_ROUTE = '/';/* /shop */
 export const BASKET_ROUTE = '/basket'; /* /basket */
 export const GOODS_ROUTE = '/goods';/* device */
+export const PRODUCT_ROUTE = '/product';/* device */

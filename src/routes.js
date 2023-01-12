@@ -1,10 +1,11 @@
 
-import { USER_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, MAIN_ROUTE, GOODS_ROUTE } from "./components/utils/const";
+import { USER_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, MAIN_ROUTE, GOODS_ROUTE, PRODUCT_ROUTE } from "./components/utils/const";
 import User from "./pages/User";
 import Auth from "./pages/Auth";
 import Basket from "./pages/Basket";
 import Main from "./pages/Main";
 import GoodsPage from "./pages/GoodsPage";
+import Product from "./pages/Product";
 
 export const authRoutes = [
     {
@@ -33,5 +34,10 @@ export const publicRoutes = [
     {
         path: GOODS_ROUTE,
         Element: GoodsPage
+    },
+
+    {
+        path: PRODUCT_ROUTE + '/:id',
+        Element: Product
     },
 ]

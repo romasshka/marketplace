@@ -1,29 +1,34 @@
 import React from "react";
 import NavOption from "./NavOption";
+import NavLink from "../../NavLink.tsx";
 
 import arrowDown from "../../../assets/images/arrowDown.svg"
-import { Link } from "react-router-dom";
 import { GOODS_ROUTE } from "../../utils/const";
+import { Button, List, ListItem } from "@mui/material";
 
 const NavigationList = ({ elements }) => {
 
     return (
         <div className="wrapper">
-            <ul className="navbar__list d-flex">
+            <List className="navbar__list d-flex">
                 {elements.map(element =>
-                    <li className="navbar__list-item" key={element.id}>
-                        <Link className="navbar__list-link" to={GOODS_ROUTE}>
+                    <ListItem key={element.id}>
+                        <Button
+                            className="navbar__list-link"
+                            to={GOODS_ROUTE}
+                            component={NavLink}
+                        >
                             {element.title}
                             <img className="arrowDown" src={arrowDown} alt="#" />
-                        </Link>
+                        </Button>
 
 
                         <NavOption
                             options={element.options}
                             title={element.title}
                         />
-                    </li>)}
-            </ul>
+                    </ListItem>)}
+            </List>
         </div>
     )
 }

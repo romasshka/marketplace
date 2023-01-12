@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Box } from "@mui/material";
 
 import GoodsGridItem from './GoodsItems/GoodsGridItem';
+import { observer } from 'mobx-react-lite';
+import { Context } from "../..";
 
-const GoodsGrid = () => {
+const GoodsGrid = observer(() => {
+
+    const { device } = useContext(Context)
 
     return (
         <Box
@@ -12,22 +16,17 @@ const GoodsGrid = () => {
                 width: "100%",
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, 270px)",
-                justifyContent: "end",
+                justifyContent: "start",
                 columnGap: "35px",
             }}
         >
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
-            <GoodsGridItem />
+
+            {device.devices.map(device =>
+                <GoodsGridItem key={device.id} device={device} />
+            )}
         </Box >
 
-    )
-}
+    );
+});
 
 export default GoodsGrid;

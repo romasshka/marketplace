@@ -1,28 +1,50 @@
+import { Button, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import { observer } from "mobx-react-lite";
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { MAIN_ROUTE } from "../../utils/const.js";
 
-const CategoryBanner = ({ backgroundImage }) => {
+const CategoryBanner = observer(({ backgroundImage }) => {
 
 
     return (
-        <div className="category__banner d-flex flexDirectionColumn jContentSpaceEvenly"
+        <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-evenly"
+            className="category__banner"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
+            sx={{
+                pl: "30px",
+            }}
         >
-            <div className="category__banner-box">
-                <h3 className="category__banner-title">
-                    Space for heading
-                </h3>
-                <p className="category__banner-subtitle">
-                    Banner sub focus
-                </p>
-            </div>
-
-            <a className="category__banner-btn" href="#">
+            <Typography
+                variant="h3"
+                variantMapping="h3"
+                sx={{
+                    lineHeight: "33px",
+                    fontSize: "22px",
+                    fontWeight: "600"
+                }}>
+                Space for heading
+            </Typography>
+            <Typography
+                variant="p"
+                className="category__banner-subtitle">
+                Banner sub focus
+            </Typography>
+            <Button
+                component={NavLink}
+                to={MAIN_ROUTE}
+                color="success"
+                className="category__banner-btn" href="#">
                 Read more
-            </a>
-        </div>
+            </Button>
+        </Box >
     )
-}
+})
 
 export default CategoryBanner;

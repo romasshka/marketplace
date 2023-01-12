@@ -13,7 +13,10 @@ export default class DeviceStore {
         ]
 
         this._devices = [
-            { id: 1, name: "iphone", price: "25000", rating: 4 },
+            { id: 1, name: "Iphone 9s", price: "250", rating: 4 },
+             { id: 2, name: "Iphone 9s", price: "250", rating: 4 },
+              { id: 3, name: "Iphone 9s", price: "250", rating: 4 },
+              { id: 4, name: "Iphone 9s", price: "250", rating: 4 },
         ]
 
         this._selectedType = {}

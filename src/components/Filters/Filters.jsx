@@ -25,7 +25,8 @@ const Filters = () => {
         <Box className="filters"
             component="aside"
             sx={{
-                minWidth: "270px",
+                minWidth: "300px",
+                mr: "50px"
             }}
         >
 
@@ -62,12 +63,6 @@ const Filters = () => {
                     Price
                 </h5>
                 <Slider
-                    sx={{
-                        maxWidth: "230px",
-                        ml: "14px",
-                        mb: "10px",
-
-                    }}
                     color="success"
                     getAriaLabel={() => 'Calculating range'}
                     value={valueSlider}
@@ -77,6 +72,12 @@ const Filters = () => {
                     min={minValue}
                     max={maxValue}
                     step="10"
+                    sx={{
+                        maxWidth: "230px",
+                        ml: "35px",
+                        mb: "10px",
+                    }}
+
                 />
 
                 <Box
